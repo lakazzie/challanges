@@ -6,7 +6,7 @@
 /*   By: lakazzie <lakazzie@student.wethinkcode.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/07 17:57:41 by lakazzie          #+#    #+#             */
-/*   Updated: 2020/04/19 10:35:20 by lakazzie         ###   ########.fr       */
+/*   Updated: 2020/04/22 21:07:35 by lakazzie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,34 +44,27 @@ int main( int argc, char **argv)
 	int i;
 	char a;
 	i = 2;
+	a = 0;
 	
-	if(argc > 3)
+	if(argc == 3)
 	{
-		while(i <= argc)
+		if(argv[2] < argv[i])
 		{
-			if (ft_strlen(argv[i]) <= ft_strlen( *argv[a]) || ft_strlen(*argv[i] >= ft_strlen(*argv[a])))
-			{
-				i == a;
-			}	
-		i++;
+			ft_putstr("Please enter 1 char numnut \n \n");
 		}
-	ft_putstr( *argv[i]);
-	}	
-	else if (ft_strlen(*argv[i]) != ft_strlen( *argv[a]))
+		while(argv[1][i] != argv[2][a]) 
 		{
-			ft_putstr("ZERO\n");
+			i++;
 		}
-	else if (argc != 3)
-	{
-		ft_putstr("\n \n \n");
+	ft_putchar((argv[1][i])('\n'));
+		while(argv[1][i] != argv[2][a])
+		{
+		ft_putstr("ZERO\n");
+		}
 	}
 	else
 	{
-		if(*argv[a] > 1)
-		{
-			ft_putstr("Please enter 1 char numnut \n \n");
-		} 	
-	
-	return (0);
+		ft_putstr("\n \n \n");
 	}
+	return (0);
 }
