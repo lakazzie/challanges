@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   challenge_01.c                                     :+:      :+:    :+:   */
+/*   Challenge02.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lakazzie <lakazzie@student.wethinkcode.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/06 19:59:30 by lakazzie          #+#    #+#             */
-/*   Updated: 2020/04/19 07:35:29 by lakazzie         ###   ########.fr       */
+/*   Created: 2020/04/24 06:33:49 by lakazzie          #+#    #+#             */
+/*   Updated: 2020/04/24 10:15:13 by lakazzie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void ft_putchar(char ch)
 {
-	write (1, &ch, 1);
+	write(1, &ch, 1);
 }
 
 void ft_putstr(char *str)
@@ -39,32 +39,36 @@ int ft_strlen(char *str)
 	return (length);
 }
 
-int main(int argc,char **argv)
+int main(int argc, char **argv)
 {
-	int ch;
-	int shrt;
-	ch = 1;
-	shrt = 1;
+	int i;
+	int a;
+	i = 2;
+	a = 0;
 	
-	if(argc > 2)
+	if(argc == 3)
 	{
-		while(ch < argc)
+		if(argv[2] && argv[3])
 		{
-			 if(ft_strlen(argv[shrt]) > ft_strlen(argv[ch]))
+			if((ft_strlen(argv[3])) <= 0)
 			{
-				shrt = ch;
+				ft_putstr("Please enter 1 char numnut. \n \n");
 			}
-			ch++;
-		}	
-	ft_putstr(argv[shrt]);
-	}
-	else if(argc == 2)
-		{
-			ft_putstr(argv[1]);
+			while((argv[i][0]) != (argv[2][a]))
+			{
+				i++;
+			}
+			ft_putchar(i);
+			ft_putchar('\n');
 		}
+		else
+		{
+			ft_putstr("ZERO\n");
+		}
+	}
 	else
 	{
-		ft_putstr("Random ass shit \n");
-	}	
+		ft_putstr("\n \n \n");
+	}
 	return (0);
 }

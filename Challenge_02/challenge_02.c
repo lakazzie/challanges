@@ -6,13 +6,13 @@
 /*   By: lakazzie <lakazzie@student.wethinkcode.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/07 17:57:41 by lakazzie          #+#    #+#             */
-/*   Updated: 2020/04/22 21:07:35 by lakazzie         ###   ########.fr       */
+/*   Updated: 2020/04/22 23:50:58 by lakazzie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putchar(char ch)
+void ft_putchar(char *ch)
 {
 	write (1, &ch, 1);
 }
@@ -50,14 +50,20 @@ int main( int argc, char **argv)
 	{
 		if(argv[2] < argv[i])
 		{
-			ft_putstr("Please enter 1 char numnut \n \n");
+			if((ft_strlen(argv[2][0]) == (ft_strlen(argv[3]))))
+			{
+				{
+				ft_putstr("Please enter 1 char numnut \n \n");
+				}
+			}	
+			while(argv[1][i] != argv[2][a]) 
+			{
+				i++;
+			}
+		ft_putchar(i);
+		ft_putchar(1, "\n", 1);
 		}
-		while(argv[1][i] != argv[2][a]) 
-		{
-			i++;
-		}
-	ft_putchar((argv[1][i])('\n'));
-		while(argv[1][i] != argv[2][a])
+		else
 		{
 		ft_putstr("ZERO\n");
 		}
@@ -67,4 +73,4 @@ int main( int argc, char **argv)
 		ft_putstr("\n \n \n");
 	}
 	return (0);
-}
+}	
