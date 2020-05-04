@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Challenge02.c                                      :+:      :+:    :+:   */
+/*   challenge_03.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lakazzie <lakazzie@student.wethinkcode.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/24 06:33:49 by lakazzie          #+#    #+#             */
-/*   Updated: 2020/04/24 18:28:30 by lakazzie         ###   ########.fr       */
+/*   Created: 2020/04/26 12:25:27 by lakazzie          #+#    #+#             */
+/*   Updated: 2020/05/04 07:16:50 by lakazzie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void ft_putchar(char ch)
 	write(1, &ch, 1);
 }
 
-void ft_putstr(char *str)
+void ft_putstr(char  *str)
 {
 	int i;
 	i = 0;
@@ -36,40 +36,56 @@ int ft_strlen(char *str)
 	{
 		length++;
 	}
-	return (length);
+	return(length);
+}
+
+int ft_isdigit(char c)
+{
+	int c;
+	c = 0;
+	if(c >= '0' && c <= '9')
+	{
+		{
+		return (1);
+		}
+	}
+	else 
+	{
+		return(0);
+	}
+	
 }
 
 int main(int argc, char **argv)
 {
 	int i;
-	int a;
 	i = 0;
-	a = 0;
 	
-	if(argc == 3)
+	if(argc == 1)
 	{
-		if(ft_strlen(argv[1]) > 1)
+		while(ft_isdigit(argv[1][0]) == 1 && ft_isdigit(argv[1][1]) == 1 && ft_isdigit(argv[1][2]) ==1 && ft_isdigit(argv[1][4]) == 1 && ft_isdigit(argv[1][5]) == 1 && ft_isdigit(argv[1][3]) == 0);
 		{
-			while((argv[1][i]) != (argv[2][a]))
+			if((argv[1]) == (00:01 && 11:59))
 			{
-				i++;
+				ft_putstr("Sun is coming up.");
 			}
-			ft_putchar(argv[1][i]);
-			ft_putchar('\n');
-			}
-			if((ft_strlen(argv[2])) != 1)
+			else if((argv[1]) == (12:01 && 23:59))
 			{
-				ft_putstr("Please enter 1 char numnut. \n \n");
+				ft_putstr("Sun is going down.");
 			}
-			
-		else if(ft_strlen(argv[1]) <= 1)
+			else if((argv[1]) == (12:00))
+			{
+				ft_putstr("Sun peaking.");
+			}
+		else
 		{
-			ft_putstr("ZERO\n");
+			ft_putstr("I said time dude.");
+		}	
 		}
 	}
 	else
 	{
-		ft_putstr("\n \n \n");
+		ft_putstr("Really dawg?");
 	}
-	return (0);
+	
 }
