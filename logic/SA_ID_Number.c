@@ -11,12 +11,21 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-
+/* 
+Create a function named ft_putchar that takes in one argument of the type character named ch for the function and returns nothing. 
+	1)Output the variable ch on standard output
+*/
 void ft_putchar(char ch)
 {
 	write(1, &ch, 1);
 }
-
+/* 
+Create a function named ft_putstr that takes in one array of the type character as an argument named str for the function and returns nothing. 
+	1) Create a variable named i of the type integer with an initial value of 0 to be a subscript for str
+	2) Create a while loop that will be exited when an element if str is equal to a null terminator. 
+		pass the current element subscripted by i in str  as an argument to ft_putchar
+		increament i by one
+*/
 void ft_putstr(char *str)
 {
 	int i;
@@ -27,7 +36,13 @@ void ft_putstr(char *str)
 		i++;
 	}
 }
-
+/* 
+Create a function named ft_strlen that takes in one array of the type character as an argument named str for the function and returns an integer type value. 
+	1) Create a variable named length of the type integer with an initial value of 0 to be a subscript for str
+	2) Create a while loop that will be exited when an element if str is equal to a null terminator. 
+		increament length by one
+	3) return length. (This is the number of chars before the null terminator)
+*/
 void ft_strlen(char *str)
 {
 	int length;
@@ -38,6 +53,17 @@ void ft_strlen(char *str)
 	}
 	return(length);
 }
+/* 
+Create a function named ft_atoi that takes in one array of the type character as an argument named str for the function and returns an integer type value. 
+	1) Create a variable named i of the type integer with an initial value of 0 to be a subscript for str
+	2) Create a loop that will be exited when an element in str subscripted by i is equal to CHAR digit 0 - 9 or the charactoer '-' or the null terminator
+		increment the variable i by one
+	3) test if the element subscripted by i is equal to the null terminater if yes:
+		return 0 to exit the function. 
+	if no:
+		create a variable 
+*/
+
 
 /* void ft_atoi(char *str)
 {
