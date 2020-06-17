@@ -61,10 +61,19 @@ Create a function named ft_atoi that takes in one array of the type character as
 	3) test if the element subscripted by i is equal to the null terminater if yes:
 		return 0 to exit the function. 
 	if no:
-		create a variable 
+		create a variable named is_neg of type integer and initial value of 1
+		create a variable named num of the type integer and initial value of 0
+		test if element in str subscripted by i is equal to the character '-' if yes:
+			is_neg is assigned to is_neg multiplied by negative 1 (-1)
+			increament i by 1
+		
+		create a while loop that will be exited when str subscripted by i is not equal to a char digit or is equal to the null terminator:
+			assign num to (num multiplied by 10) plus (str subscripted minus char 0)
+			increment i
+	
+	return num multiplied by is_neg
+			
 */
-
-
 /* void ft_atoi(char *str)
 {
 	if(*str == '\0')
